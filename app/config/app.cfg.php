@@ -5,6 +5,7 @@ return array(
         "application" => "app",
         "controllers" => "app/controllers",
         "models" => "app/models",
-        "views" => "app/views"
+        "views" => "app/views",
+        "template_dir" => "app/views/default"
     )
 );
