@@ -1,7 +1,9 @@
 <?php
 
+use Admin\AdminController;
+
 class IndexController {
     public function indexAction() {
-        return RenderView::render("test");
+        return RenderView::render("signup");
     }
 }
