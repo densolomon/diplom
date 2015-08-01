@@ -10,9 +10,11 @@ class FrontController {
     }
 
     public function run() {
-        $request = explode("/",$this->_request);
-        $ctrl = (!empty($request[0])) ? ucfirst($request[0])."Controller" : "IndexController";
-        $method = (!empty($request[1])) ? $request[1]."Action" : "indexAction";
+        $params = $this->getUrlParams();
+
+
+        $ctrl = ($params["module"]) ? $params["module"]."\\".$params["controller"] : $params["controller"];
+        $method = $params["method"];
 
         if(class_exists($ctrl)) {
             $objCtrl = new $ctrl();
@@ -20,6 +22,21 @@ class FrontController {
                 $this->_body = $objCtrl->$method();
             }
         }
+    }
+
+    private function getUrlParams() {
+        $request = explode("/",$this->_request);
+        if($request[0] == "admin") {
+            return array(
+                "module" => "Admin",
+                "controller" => (!empty($request[1])) ? ucfirst($request[1])."Controller" : "IndexController",
+                "method" => (!empty($request[2])) ? $request[2]."Action" : "indexAction"
+            );
+        }
+        return array(
+            "controller" => (!empty($request[0])) ? ucfirst($request[0])."Controller" : "IndexController",
+            "method" => (!empty($request[1])) ? $request[1]."Action" : "indexAction"
+        );
     }
 
     public function getBody() {
