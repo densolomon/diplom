@@ -56,6 +56,7 @@ DROP TABLE IF EXISTS `bazardb`.`user` ;
 CREATE TABLE IF NOT EXISTS `bazardb`.`user` (
   `id_user` CHAR(10) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
   `surname` VARCHAR(45) NULL,
   `patronymic` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
