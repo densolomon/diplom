@@ -21,14 +21,27 @@
 </head>
 <body>
 <div class="container">
-    <form class="form-signup">
+    <form action="/register" class="form-signup" method="POST">
         <h2 class="form-signup-heading">Регистрация</h2>
         <div class="form-group">
             <label class="control-label col-xs-3" for="firstName">Имя:</label>
             <div class="col-xs-9">
-                <input type="text" class="form-control" id="firstName" placeholder="Введите имя">
+                <input type="text" class="form-control" name="firstName" placeholder="Введите имя">
             </div>
         </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3">Имя:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="email" placeholder="Введите E-mail">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3">Имя:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="pass" placeholder="Введите пароль">
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
     </form>
 </div>
 </body>

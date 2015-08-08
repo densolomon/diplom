@@ -1,7 +1,6 @@
 <?php
-
+require 'Singleton.php';
 class DatabaseConnection {
-
     use Singleton;
 
     public $dbConn = null;
