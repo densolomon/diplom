@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <title>Базар - мультитоварный интернет магазин</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css" type="text/css">
@@ -24,6 +24,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../../css/creative.css" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,21 +50,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    <script>
-        function animate(elem){
-            var effect = elem.data("effect");
-            elem.addClass("animated " + effect).one('webkitAnimationEnd mozAnimationEnd' +
-                'MSAnimationEnd oanimationend animationend', function(){
-                elem.removeClass("animated " + effect);
-            });
-        }
-        $(document).ready(function(){
-            $(".flip").mouseenter(function(){
-                console.log("kgjhgjhg");
-                animate($(this));
-            });
-        });
-    </script>
+
 </head>
 
 <body id="page-top">
@@ -76,23 +65,59 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">БАЗАР</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">О магазине</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Каталог товаров</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#portfolio">Доставка и оплата</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Контакты</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-sign-in"></i>
+                            ВОЙТИ
+                        </a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="E-mail" value="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" placeholder="Пароль" value="">
+                                                <div class="help-block text-right">
+                                                    <a href="">Забыли пароль?</a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> запомнить меня
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        <a href=""><b>Регистрация</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -104,7 +129,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+                <h2>Добро пожаловать в мультитоварный интернет магазин!</h2>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
@@ -177,11 +202,15 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Авто Мото
                                 </div>
+                                <li>Масла</li>
+                                <li>Фильтры</li>
+                                <li>Запчасти</li>
+                                <li>Шины и диски</li>
                             </div>
                         </div>
                     </a>
@@ -192,11 +221,15 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Цифровая техника
                                 </div>
+                                <li>Телефоны, планшеты</li>
+                                <li>Компьтеры</li>
+                                <li>Бытовая техника</li>
+                                <li>Телевизоры</li>
                             </div>
                         </div>
                     </a>
@@ -207,11 +240,14 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Продукты питания
                                 </div>
+                                <li>Овощи, фрукты</li>
+                                <li>Мясо, птица, яйца</li>
+                                <li>Мед и продукты пчеловодства</li>
                             </div>
                         </div>
                     </a>
@@ -222,11 +258,15 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Изделия из дерева
                                 </div>
+                                <li>Посуда</li>
+                                <li>Мебель</li>
+                                <li>Двери, окна</li>
+                                <li>Игрушки</li>
                             </div>
                         </div>
                     </a>
